@@ -1,0 +1,14 @@
+{% extends 'feed/layout.html' %}
+
+{% block content %}
+<h1 class="center-align green">목록</h1>
+<ul class="collection">
+    {% for event in events %}
+        <li class="collection-item avatar">
+            <i class="medium material-icons circle">event_note</i>
+            <a href="/event/details/{{event.id}}">{{event.title}}</a>
+        </li>
+    {% endfor %}
+</ul>
+<div class="center-align"><a href="{% url 'create' %}" class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>이벤트 새로 만들기</a></div>
+{% endblock %}

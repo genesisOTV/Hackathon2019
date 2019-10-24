@@ -1,0 +1,24 @@
+{% extends 'feed/layout.html' %}
+
+{% block content %}
+<h1 class="center-align green">{{event.title}}</h1>
+<div class="card">
+    <div class="card-content">
+        {{event.description}}
+    </div>
+    <div class="card-action">
+        <p>총 금액:</p>
+        {{event.amount}}<sem> 원</sem>
+    </div>
+    <div class="card-action">
+        <p>이벤트 만든 날짜:</p>
+        {{event.created_at}}
+    </div>
+    <div class="card-action">
+        <p>마감일:</p>
+        {{event.end_date}}
+    </div>
+</div>
+
+<a href="/" class="btn">뒤로</a>
+{% endblock %}
